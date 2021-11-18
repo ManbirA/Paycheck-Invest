@@ -21,8 +21,8 @@ type public_token_struct struct {
 
 func NewTokenController(client_id string, secret string) *TokenController {
 	configuration := plaid.NewConfiguration()
-	configuration.AddDefaultHeader("PLAID-CLIENT-ID", "6192847a1c29f40010347294")
-	configuration.AddDefaultHeader("PLAID-SECRET", "b14606e87ed9be7c68e2ca224095a1")
+	configuration.AddDefaultHeader("PLAID-CLIENT-ID", "")
+	configuration.AddDefaultHeader("PLAID-SECRET", "")
 	configuration.UseEnvironment(plaid.Sandbox)
 	client := plaid.NewAPIClient(configuration)
 	return &TokenController{client}
